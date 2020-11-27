@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 27, 2020 lúc 05:15 AM
+-- Thời gian đã tạo: Th10 27, 2020 lúc 10:40 AM
 -- Phiên bản máy phục vụ: 10.4.14-MariaDB
 -- Phiên bản PHP: 7.3.23
 
@@ -49,7 +49,8 @@ INSERT INTO `binhluan` (`ID_DocGia`, `ID_Sach`, `NoiDungBL`, `thoigian_bl`) VALU
 ('ND001', '001', 'hay quáaaaaaaa', '2020-11-27 02:47:04'),
 ('ND001', '001', 'hay quáaaaaaaa', '2020-11-27 02:47:29'),
 ('ND001', '001', 'hay quáaaaaaaa', '2020-11-27 02:47:51'),
-('ND001', '002', 'sdasd', '2020-11-27 03:31:23');
+('ND001', '002', 'sdasd', '2020-11-27 03:31:23'),
+('ND001', '0021', 'dasasd', '2020-11-27 07:13:07');
 
 -- --------------------------------------------------------
 
@@ -91,6 +92,7 @@ CREATE TABLE `chu_de_sach` (
 INSERT INTO `chu_de_sach` (`ID_ChuDe`, `TenChuDe`) VALUES
 ('CD002', 'Tieu thuyết tình cảm'),
 ('CD003', 'Truyện kiếm hiệp'),
+('CD004', 'Văn học'),
 ('CĐ001', 'Giáo dục');
 
 -- --------------------------------------------------------
@@ -135,7 +137,10 @@ CREATE TABLE `nguoidung` (
 --
 
 INSERT INTO `nguoidung` (`ID`, `HoTen`, `NgaySinh`, `DiaChi`, `DienThoai`, `ChucVu`, `username`, `password`, `HinhAnh`) VALUES
-('ND001', 'Trần Hoài Đức', '1999-10-19 10:14:56', 'LLQ, Q11', '0123456789', 'SV', 'duchoai', 'duchoai', 'Ảnh2.png');
+('ND001', 'Trần Hoài Đức', '1999-10-19 10:14:56', 'LLQ, Q11', '0123456789', 'SV', 'duchoai', 'duchoai', 'Ảnh2.png'),
+('ND002', 'Nguyễn Thị Kim Anh', '2000-02-19 10:14:56', 'Quận 11', '0123456789', 'DGK', 'kimanh', 'kimanh', ''),
+('ND003', 'Nguyễn Quốc Cường', '2000-07-21 10:00:00', 'Quận 11', '0123456789', 'GV', 'qcuong', 'qcuong', ''),
+('ND004', 'Dương Thái Nhật', '2000-01-21 10:00:00', 'Quận 11', '0123456789', 'SV', 'duongnhat', 'duongnhat', '');
 
 -- --------------------------------------------------------
 
@@ -157,7 +162,8 @@ CREATE TABLE `nha_xuat_ban` (
 INSERT INTO `nha_xuat_ban` (`ID_NXB`, `TenNXB`, `DiaChi`, `DienThoai`) VALUES
 ('NXB001', 'Nhà Xuất Bản Tổng hợp TP.HCM', 'không biết', ' 0123'),
 ('NXB002', 'NXB Kim Đồng', '207 Lê Hồng Phong, p5, q10, tp Hồ Chí Minh', '0111232131'),
-('NXB003', 'NXB Văn Học', '601 CNT*, p15,q10,tp Hồ Chid Minh', '0123465689');
+('NXB003', 'NXB Văn Học', '601 CNT*, p15,q10,tp Hồ Chid Minh', '0123465689'),
+('NXB004', 'NXB Trẻ', '161B Lý Chính Thắng, Phường 7, Quận 3, Thành phố Hồ Chí Minh', '028 3931 6289');
 
 -- --------------------------------------------------------
 
@@ -224,6 +230,7 @@ INSERT INTO `sach` (`ID_Sach`, `ID_ChuDe`, `ID_NXB`, `TenSach`, `Gia`, `tacGia`,
 ('006112', 'CĐ001', 'NXB001', 'Đắc Nhân Tâm', 38000, 'Dale Carnegie', 'Tại sao Đắc Nhân Tâm luôn trong Top sách bán chạy nhất thế giới?<br><br>Bởi vì đó là cuốn sách mọi người đều nên đọc.<br><br>Hiện nay có một sự hiểu nhầm đã xảy ra. Tuy Đắc Nhân Tâm là tựa sách hầu hết mọi người đều biết đến, vì những danh tiếng và mức độ phổ biến, nhưng một số người lại “ngại” đọc. Lý do vì họ tưởng đây là cuốn sách “dạy làm người” nên có tâm lý e ngại. Có lẽ là do khi giới thiệu về cuốn sách, người ta luôn gắn với miêu tả đây là “nghệ thuật đối nhân xử thế”, “nghệ thuật thu phục lòng người”… Những cụm từ này đã không còn hợp với hiện nay nữa, gây cảm giác xa lạ và không thực tế.', 'images/DacNhanTam.jpg', '0000-00-00 00:00:00'),
 ('00612', 'CĐ001', 'NXB001', 'Đắc Nhân Tâm', 38000, 'Dale Carnegie', 'Tại sao Đắc Nhân Tâm luôn trong Top sách bán chạy nhất thế giới?<br><br>Bởi vì đó là cuốn sách mọi người đều nên đọc.<br><br>Hiện nay có một sự hiểu nhầm đã xảy ra. Tuy Đắc Nhân Tâm là tựa sách hầu hết mọi người đều biết đến, vì những danh tiếng và mức độ phổ biến, nhưng một số người lại “ngại” đọc. Lý do vì họ tưởng đây là cuốn sách “dạy làm người” nên có tâm lý e ngại. Có lẽ là do khi giới thiệu về cuốn sách, người ta luôn gắn với miêu tả đây là “nghệ thuật đối nhân xử thế”, “nghệ thuật thu phục lòng người”… Những cụm từ này đã không còn hợp với hiện nay nữa, gây cảm giác xa lạ và không thực tế.', 'images/DacNhanTam.jpg', '0000-00-00 00:00:00'),
 ('008', 'CD002', 'NXB002', 'Thanh Xuan Không Hối Tiếc', 4790000, 'Du Phong', '<br>Mỗi người có một cách khác nhau để sống những ngày tuổi trẻ, có người dành trọn nó cho những cuộc tình, có người dành trọn nó cho công việc, có người dành trọn nó để tự yêu thương mình, và cũng có những người chia tuổi trẻ của mình ra, để yêu một vài người, sau đó yêu mình, yêu người xung quanh mình, rồi đến một lúc nào đó thích hợp mới tiếp tục muốn yêu thêm một người cho đến hết cuộc đời.<br>\r\n<br>Dù người ta có dành tuổi trẻ của mình cho ai hay để làm gì, thì cũng mong sau này khi đã đủ chín chắn để ngoái đầu nhìn lại, họ cũng sẽ mỉm cười, một nụ cười vô ưu viên mãn.<br>', 'images/thanh_xuan_khong_hoi_tiec.jpg', '0000-00-00 00:00:00'),
+('009', 'CD004', 'NXB004', 'Con Chim Xanh Biếc Bay Về', 97500, 'Nguyễn Nhật Ánh', 'Không giống như những tác phẩm trước đây lấy bối cảnh vùng quê miền Trung đầy ắp những hoài niệm tuổi thơ dung dị, trong trẻo với các nhân vật ở độ tuổi dậy thì, trong quyển sách mới lần này nhà văn Nguyễn Nhật Ánh lấy bối cảnh chính là Sài Gòn – Thành phố Hồ Chí Minh nơi tác giả sinh sống (như là một sự đền đáp ân tình với mảnh đất miền Nam). Các nhân vật chính trong truyện cũng “lớn” hơn, với những câu chuyện mưu sinh lập nghiệp lắm gian nan thử thách của các sinh viên trẻ đầy hoài bão. Tất nhiên không thể thiếu những câu chuyện tình cảm động, kịch tính và bất ngờ khiến bạn đọc ngẩn ngơ, cười ra nước mắt. Và như trong mọi tác phẩm Nguyễn Nhật Ánh, sự tử tế và tinh thần hướng thượng vẫn là điểm nhấn quan trọng trong quyển sách mới này.\r\n\r\nNhư một cuốn phim “trinh thám tình yêu”, Con chim xanh biếc bay về dẫn bạn đi hết từ bất ngờ này đến tò mò suy đoán khác, để kết thúc bằng một nỗi hân hoan vô bờ sau bao phen hồi hộp nghi kỵ đến khó thở.\r\n\r\nBạn sẽ theo phe sinh viên-nhân viên với những câu thơ dịu dàng và đáo để, hay phe ông chủ với những kỹ năng kinh doanh khởi nghiệp? Và hãy đoán thử, điều gì khiến bạn có thể cảm động đến rưng rưng trong cuộc sống giữa Sài Gòn bộn bề?\r\n\r\nLâu lắm mới có hình ảnh thành phố rộn ràng trong tác phẩm của Nguyễn Nhật Ánh - điều hấp dẫn khác thường của Con chim xanh biếc bay về.\r\n\r\nChính vì thế mà cuốn sách chỉ có một cách đọc thôi: một mạch từ đầu đến cuối!\r\n\r\nĐặc biệt, kèm theo mỗi cuốn sách là 6 postcard với nhiều tranh vẽ của họa sĩ Đỗ Hoàng Tường.', 'images/conchimxanhbiec.jpg', '2020-11-27 15:58:36'),
 ('010', 'CĐ001', 'NXB001', 'Đắc Nhân Tâm', 38000, 'Dale Carnegie', 'Tại sao Đắc Nhân Tâm luôn trong Top sách bán chạy nhất thế giới?<br><br>Bởi vì đó là cuốn sách mọi người đều nên đọc.<br><br>Hiện nay có một sự hiểu nhầm đã xảy ra. Tuy Đắc Nhân Tâm là tựa sách hầu hết mọi người đều biết đến, vì những danh tiếng và mức độ phổ biến, nhưng một số người lại “ngại” đọc. Lý do vì họ tưởng đây là cuốn sách “dạy làm người” nên có tâm lý e ngại. Có lẽ là do khi giới thiệu về cuốn sách, người ta luôn gắn với miêu tả đây là “nghệ thuật đối nhân xử thế”, “nghệ thuật thu phục lòng người”… Những cụm từ này đã không còn hợp với hiện nay nữa, gây cảm giác xa lạ và không thực tế.', 'images/DacNhanTam.jpg', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
