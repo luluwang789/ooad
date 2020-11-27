@@ -1,5 +1,5 @@
 <?php
-   include_once "dbconnect.php";
+   $conn = mysqli_connect("localhost","root","","qlthuvien");
    function showContent($db){
     $cnt=0;
     $html="";

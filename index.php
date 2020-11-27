@@ -126,7 +126,7 @@
 			<div class="block-slider block-slider4">
 				<ul class="" id="bxslider-home4">
 					<li>
-						<img src="images/image1.jpg" alt="Slide">
+						<img src="images/baner1.jpg" alt="Slide">
 						<!-- <div class="caption-group">
 							<h2 class="caption title">
 								iPhone <span class="primary">6 <strong>Plus</strong></span>
@@ -135,7 +135,7 @@
 							<a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
 						</div> -->
 					</li>
-					<li><img src="images/image2.jpg" alt="Slide">
+					<li><img src="images/banner2.jpg" alt="Slide">
 						<!-- <div class="caption-group">
 							<h2 class="caption title">
 								by one, get one <span class="primary">50% <strong>off</strong></span>
@@ -144,7 +144,7 @@
 							<a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
 						</div> -->
 					</li>
-					<li><img src="images/image3.jpg" alt="Slide">
+					<li><img src="images/banner3.jpg" alt="Slide">
 						<!-- <div class="caption-group">
 							<h2 class="caption title">
 								Apple <span class="primary">Store <strong>Ipod</strong></span>

@@ -139,7 +139,7 @@
                     <div class="row">
                         <div class="col-sm-3"></div>
                         <div class="col-sm-6">
-                            <form action="" method="post" id="">
+                            <form action="" method="post" id="inputSearch">
                                 <div style="text-align: center;font-size: 18px;margin-top: 10px">
                                     <b><i>Chi nhánh  </i></b>
                                     <select id="dsChiNhanh">
@@ -149,7 +149,7 @@
                                     </select>
                                 </div>
                                 <br>
-                                <input type="search" name="search" id="search" class="form-control" placeholder="Tìm kiếm....">
+                                <input type="text" name="search" id="search" class="form-control" placeholder="Tìm kiếm....">
                                 <br>
                                 <center><input type="submit" id="inputSearch" value="Search" class="btn btn-primary"></center>
                             </form>
